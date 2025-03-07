@@ -70,8 +70,6 @@ The training loop uses **W&B** for logging and tracks the following metrics:
 - Training Loss
 - Validation Loss
 
-  <img width="742" alt="Screenshot 2025-03-08 at 8 09 54 AM" src="https://github.com/user-attachments/assets/dd13ab70-0946-4e10-9099-1db0e07480bd" />
-
 ```python
 wandb.init(project="masnavi_gpt2")
 for epoch in range(epochs):
@@ -93,6 +91,8 @@ for epoch in range(epochs):
 Training Results:
 - Training Loss: ~**2.1** (after 10 epochs)
 - Validation Loss: ~**2.4**
+
+  <img width="742" alt="Screenshot 2025-03-08 at 8 09 54 AM" src="https://github.com/user-attachments/assets/dd13ab70-0946-4e10-9099-1db0e07480bd" />
 
 W&B Dashboard: [View Project Logs](https://wandb.ai/masnavi_gpt2)
 
