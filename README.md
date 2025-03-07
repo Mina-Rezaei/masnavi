@@ -121,9 +121,5 @@ print(tokenizer.decode(output[0]))
 - The small gap between train and validation loss without divergence looks fine at first — but it's also a red flag because it could indicate that the model fits the training dataset perfectly without exploring more complex language features.
 
 ## 🔥 Why LLaMA 3 is the Game Changer for Your Project:
-Feature	GPT-2	LLaMA 3	Why It Matters for Masnavi
-Model Size	345M	7B - 13B	Bigger model → Understands poetry style + hidden metaphors
-Context Length	1024 tokens	8K - 32K tokens	Can capture long poems without truncating
-Dataset	English-heavy	Multilingual (including Persian!)	Higher chance of understanding Persian literature
-Bias	High	Lower	Trained on more diverse literature
-Fine-Tuning Speed	Slow	Faster with QLoRA	More efficient for Kaggle + Lambda Labs 💪![image](https://github.com/user-attachments/assets/cb0186eb-092a-402c-bc43-f20f7df0df80)
+
+![image](https://github.com/user-attachments/assets/cb0186eb-092a-402c-bc43-f20f7df0df80)
