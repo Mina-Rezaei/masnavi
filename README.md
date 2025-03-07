@@ -96,6 +96,12 @@ Training Results:
 
 W&B Dashboard: [View Project Logs](https://wandb.ai/minarezaei82-plexure/masnavi?nw=nwuserminarezaei82)
 
+## W&B Dashboard
+Click the image below to view the project logs on W&B:
+
+[![W&B Dashboard](./assets/wandb_dashboard.png)](https://wandb.ai/minarezaei82-plexure/masnavi?nw=nwuserminarezaei82)
+
+
 ## Inference
 To generate text completions:
 
