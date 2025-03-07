@@ -106,17 +106,24 @@ output = model.generate(input_ids, max_length=128, temperature=0.8, top_k=50)
 print(tokenizer.decode(output[0]))
 ```
 
-## Future Improvements
-- Fine-tuning larger models (GPT-2 Medium, GPT-2 Large)
-- Implementing **Beam Search** for better generations
-- Hyperparameter tuning
-- Model Deployment using **Gradio**
+## 🔍 Bias Detection:
 
-## Acknowledgements
-Special thanks to:
-- **Hugging Face Community**
-- **Lambda Labs** for providing free GPUs
-- **Weights & Biases** for experiment tracking
+✅ What looks good:
+- Both train_loss and val_loss are decreasing, which shows the model is learning.
 
-## License
-This project is licensed under the **MIT License**.
+🚨 What shows Bias:
+- The starting point of validation loss (0.78) is already quite low — this could mean the model is memorizing patterns in the data instead of generalizing.
+- The loss values overall are too close together (train: 0.61, val: 0.64) — usually, the validation loss should be slightly higher if the model is learning properly.
+- This means the model is not struggling with unseen data, which is a classic underfitting + bias issue.
+
+## 🔥 Overfitting Evidence:
+- The train loss drops quickly (steep curve at the beginning) — showing the model is memorizing the dataset rather than learning its deeper structure.
+- The small gap between train and validation loss without divergence looks fine at first — but it's also a red flag because it could indicate that the model fits the training dataset perfectly without exploring more complex language features.
+
+## 🔥 Why LLaMA 3 is the Game Changer for Your Project:
+Feature	GPT-2	LLaMA 3	Why It Matters for Masnavi
+Model Size	345M	7B - 13B	Bigger model → Understands poetry style + hidden metaphors
+Context Length	1024 tokens	8K - 32K tokens	Can capture long poems without truncating
+Dataset	English-heavy	Multilingual (including Persian!)	Higher chance of understanding Persian literature
+Bias	High	Lower	Trained on more diverse literature
+Fine-Tuning Speed	Slow	Faster with QLoRA	More efficient for Kaggle + Lambda Labs 💪![image](https://github.com/user-attachments/assets/cb0186eb-092a-402c-bc43-f20f7df0df80)
